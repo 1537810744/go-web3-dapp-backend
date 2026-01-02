@@ -11,22 +11,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
 
-  geth:
-    image: ethereum/client-go:stable
-    command: >
-      --dev
-      --http
-      --http.addr "0.0.0.0"
-      --http.port 8545
-      --http.corsdomain "*"
-      --http.vhosts "*"
-      --ws
-      --ws.addr "0.0.0.0"
-      --ws.port 8546
-      --allow-insecure-unlock
-    ports: ["8545:8545","8546:8546"]
-    volumes:
-      - geth_data:/root/.ethereum
+
 
   transactor:
     build: ./services/transactor
@@ -50,4 +35,4 @@ services:
 
 volumes:
   db_data:
-  geth_data:
+
