@@ -1,0 +1,17 @@
+ethereum:
+  rpc_url: "http://geth:8545"
+  ws_url: "ws://geth:8546"
+  contract_address: "0xYourContractAddress"
+  chain_id: 1337
+database:
+  host: "mysql"
+  port: 3306
+  username: "web3user"
+  password: "web3pass"
+  dbname: "web3_dapp"
+security:
+  jwt_secret: "your-secret-key"
+  encryption_key: "12345678901234567890123456789012"
+dev:
+  auto_fund_amount: "100"
+  faucet_private_key: "0x..."
